@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+	background-color:#1c1b1b;  
+	color:white;
+	font-family:"Helvetica Neue", Helvetica, Arial, "sans-serif";
+	transition: background 1s;
+}
+
+canvas{
+	z-index: -1;
+	position: absolute;
+} 
+
+.Button{
+	font-weight: bold;
+	letter-spacing:1px;
+	color:#222;
+	background-image: radial-gradient(#fff, whitesmoke);
+	border: 1px solid black;
+	transition:color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out, background 0.25s ease-in-out;
+	outline:none;
+	justify-content: flex-end;
+}
+
+.Button:hover{
+	background:#222;
+	color:whitesmoke;
+}
+
+.Button:active{
+	background-image: radial-gradient(whitesmoke, #fff);
+	color:black;
+	letter-spacing:0px;
+	outline:none;	
+}
+
+#draw{
+	padding: 20px;
+	width: 100%;
+	height: 75px;
+	margin:5% 0 0 5%;
+	float: right;
+	border-radius: 42px;
+	font-size:1.75rem;
+}
+
+#hide, #show{
+	padding: 10px;
+	width: 75%;
+	height: 50px;
+	margin:2% 0 0 2%;
+	border-radius: 33px;
+	float: right;
+	font-size:1.125rem;
+}
+
+#show{
+	width:15%;
+	position: fixed;
+	z-index: 2;
+	margin-left:80%;
+}
+
+#reset{
+	padding: 10px;
+	width: 50%;
+	height: 40px;
+	margin:2% 0 0 2%;
+	border-radius: 22px;
+	float: right;
+	font-size:1rem;
+}
+
+
+.controls{
+	border: 4px solid ghostwhite;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	margin-left: 48%;
+	position: fixed;
+	transition: opacity 0.333s;
+}
+
+#color-display{
+  padding: 40px;
+  border-radius: 50%;
+  width:100px;
+  height:100px;
+  grid-column:2/3;
+  justify-content: space-around;
+  margin:5% 0 0 5%;
+}
+
+.rotation{
+	justify-content: space-around;
+	flex-basis: 25%;
+	margin: 5% 0 0 4%;
+
+}
+
+i {
+  border: solid;
+  border-width: 0 11px 11px 0;
+  display: inline-block;
+  padding: 11px;
+  margin:0 0 10% 41%;
+  border-radius: 3px;
+}
+
+.sliders{
+  padding: 20px;
+  flex-basis: 100%;
+}
+
+input[type=range]{
+  height: 11px;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input[type=range], input[type=range]::-webkit-slider-thumb{
+  appearance: none;
+  -webkit-appearance: none;
+} 
+
+input[type=range]::-webkit-slider-thumb{
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: whitesmoke;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: 2px solid #eeeeee;
+}
+
+.white{
+	background:#cccccc;
+}
+
+#vertical{
+	transform: rotate(90deg);
+}
+
+#dot-counter{
+	color:gray;
+	text-align: right;
+	position: fixed;
+	margin-left:1%;
+}
+
+.checkBox{
+	display: block;
+	position: relative;
+	cursor: pointer;
+	padding-left: 30px;
+	margin-top:25px;
+	color:gray;
+	float: right;
+	line-height:70%;
+}
+.checkBox input {
+	position: absolute;
+	opacity: 0;
+}
+.checkmark {
+	position: absolute;
+	top: -8px;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: whitesmoke;
+}
+.checkBox:hover input ~ .checkmark {
+	background-color: ghostwhite; 
+}
+.checkBox input:checked ~ .checkmark { 
+	background-color:darkslategray;
+}
+.checkmark:after { 
+	content: "";
+	position: absolute;
+	display: none;
+}
+.checkBox input:checked ~ .checkmark:after {
+	display: block;
+}
+.checkBox .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid #cccccc;
+	border-width: 0 4px 4px 0;
+	transform: rotate(45deg);
+}
+
+.buttons{
+	flex-basis: 33%;
+	margin-left: 5%;
+}
+
+

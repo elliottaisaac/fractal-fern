@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fractal Fern Art Thingy</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<p id="dot-counter"></p>
+		
+		<section class="controls">
+			  <div id="color-display"></div>
+
+			  <div class="rotation">
+				<p><i class="arrow"></i></p>
+				<input value="0" type="range" min="0" max="365" id="rot" class="white">
+			  </div>
+
+			  <div class="buttons">
+				  <button class="Button" id="draw">Draw</button>
+				  <button class="Button" id="hide">Hide controls</button>
+				  <button class="Button" id="reset">Reset</button>
+
+				  <label class="checkBox">
+					  Light Background
+					  <input type="checkbox" id="check">
+					  <span class="checkmark"></span>
+				  </label>
+			  </div>
+
+			  <div class="sliders">
+					  <div>
+						  <input value="127" type="range" min="0" max="255" id="red">
+					  </div>
+
+					  <div> 
+						  <input value="192" type="range" min="0" max="255" id="green">
+					  </div>
+
+					  <div>
+						  <input  value="127" type="range" min="0" max="255" id="blue">
+					  </div>
+			  </div>
+		</section>
+		
+		<button class="Button" id="show">Show controls</button>
+	</header>
+	
+	<main>
+		<canvas id="canvas"></canvas>
+		<script src="script.js"></script>
+	</main>
+	
+</body>
+</html>
